@@ -1,5 +1,5 @@
 import lc3b_types::*;
-//test
+//testing
 module datapath
 (
     input clk,
