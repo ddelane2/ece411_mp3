@@ -1,0 +1,7 @@
+         ps       /mp2_tb/dut/cache_unit/control_unit/pmem_write   /mp2_tb/dut/cache_unit/control_unit/pmem_wdata   /mp2_tb/dut/cache_unit/cache_unit/pmem_address      
+          delta                                                                                                                                                         
+          0  +0                                                0                 00000000000000000000000000000000                                             xxxx 
+    5195000  +2                                                1                 600d600d600d600d600d600d600d0030                                             0150 
+    5425000  +3                                                0                 00000000000000000000000000000000                                             0050 
+    5735000  +2                                                1                 52205220522052205220522000b05220                                             0050 
+    5965000  +3                                                0                 00000000000000000000000000000000                                             00d0 

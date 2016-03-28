@@ -1,0 +1,14 @@
+	module hit_module #(parameter width = 1)
+	(
+		input valid_bit0, valid_bit1, tag_comp0, tag_comp1,
+		output logic hit
+	);
+
+	always_comb
+	begin
+		if (valid_bit0 && tag_comp0 || valid_bit1 && tag_comp1) 
+			hit = 1'b1;
+		else
+			hit = 1'b0;
+	end
+	endmodule : hit_module

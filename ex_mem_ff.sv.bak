@@ -1,0 +1,26 @@
+import lc3b_types::*;
+
+module ex_mem_flipflop
+(
+    input clk,
+	 input lc3b_word pc_plus2_in,
+    input lc3b_word adder_in,
+	 input lc3b_word alu_in,
+	 input lc3b_word control_ex_mem_in,
+	  input lc3b_word pc_plus2_out,
+	 output lc3b_word adder_out,
+	 output lc3b_word alu_out,
+	 output lc3b_word control_ex_mem_out
+
+);
+
+
+always_ff @(posedge clk)
+	begin
+	  pc_plus2_out = pc_plus2_in;
+	  adder_out = adder_in;
+	  alu_out = alu_in;
+	  control_ex_mem_out = control_ex_mem_in;
+	end
+	 
+ endmodule : ex_mem_flipflop

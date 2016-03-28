@@ -1,0 +1,348 @@
+# do mp3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/plus2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus2
+# 
+# Top level modules:
+# 	plus2
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/ex_mem_ff.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ex_mem_ff_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module ex_mem_flipflop
+# 
+# Top level modules:
+# 	ex_mem_flipflop
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/mem_wb_ff.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mem_wb_ff_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mem_wb_flipflop
+# 
+# Top level modules:
+# 	mem_wb_flipflop
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/if_id_ff.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package if_id_ff_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module if_id_flipflop
+# 
+# Top level modules:
+# 	if_id_flipflop
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/id_ex_ff.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package id_ex_ff_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module id_ex_flipflop
+# 
+# Top level modules:
+# 	id_ex_flipflop
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/adj.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adj_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj
+# 
+# Top level modules:
+# 	adj
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package gencc_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package regfile_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/nzpcomp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package nzpcomp_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module nzpcomp
+# 
+# Top level modules:
+# 	nzpcomp
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/adju.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package adju_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module adj_u
+# 
+# Top level modules:
+# 	adj_u
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/rom_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package rom_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module control_rom
+# 
+# Top level modules:
+# 	control_rom
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/CPU.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package CPU_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# 
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/mp3_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp3_tb
+# 
+# Top level modules:
+# 	mp3_tb
+# vlog -sv -work work +incdir+/home/ddelane2/ece411/mp3 {/home/ddelane2/ece411/mp3/magic_memory_dp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module magic_memory_dp
+# 
+# Top level modules:
+# 	magic_memory_dp
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.if_id_ff_sv_unit
+# Loading work.if_id_flipflop
+# Loading work.mux2
+# Loading work.plus2
+# Loading work.register
+# Loading work.id_ex_ff_sv_unit
+# Loading work.id_ex_flipflop
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adju_sv_unit
+# Loading work.adj_u
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ex_mem_ff_sv_unit
+# Loading work.ex_mem_flipflop
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.nzpcomp_sv_unit
+# Loading work.nzpcomp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.mem_wb_ff_sv_unit
+# Loading work.mem_wb_flipflop
+# Loading work.rom_control_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory_dp
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'in'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(5).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'out'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(6).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/mp3_tb/dut/CPU_unit/datapathunit/registerfile/data
+restart -f; run 30000ns
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.if_id_ff_sv_unit
+# Loading work.if_id_flipflop
+# Loading work.mux2
+# Loading work.plus2
+# Loading work.register
+# Loading work.id_ex_ff_sv_unit
+# Loading work.id_ex_flipflop
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adju_sv_unit
+# Loading work.adj_u
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ex_mem_ff_sv_unit
+# Loading work.ex_mem_flipflop
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.nzpcomp_sv_unit
+# Loading work.nzpcomp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.mem_wb_ff_sv_unit
+# Loading work.mem_wb_flipflop
+# Loading work.rom_control_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory_dp
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'in'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(5).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'out'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(6).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+add wave -position end  sim:/mp3_tb/dut/CPU_unit/control_rom/opcode
+restart -f; run 30000ns
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.if_id_ff_sv_unit
+# Loading work.if_id_flipflop
+# Loading work.mux2
+# Loading work.plus2
+# Loading work.register
+# Loading work.id_ex_ff_sv_unit
+# Loading work.id_ex_flipflop
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adju_sv_unit
+# Loading work.adj_u
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ex_mem_ff_sv_unit
+# Loading work.ex_mem_flipflop
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.nzpcomp_sv_unit
+# Loading work.nzpcomp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.mem_wb_ff_sv_unit
+# Loading work.mem_wb_flipflop
+# Loading work.rom_control_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory_dp
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'in'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(5).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'out'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(6).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+add wave -position 24  sim:/mp3_tb/dut/CPU_unit/datapathunit/mem_wb_flipflop/control_mem_wb_out_ff.opcode
+restart -f; run 30000ns
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.lc3b_types
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.CPU_sv_unit
+# Loading work.CPU
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.if_id_ff_sv_unit
+# Loading work.if_id_flipflop
+# Loading work.mux2
+# Loading work.plus2
+# Loading work.register
+# Loading work.id_ex_ff_sv_unit
+# Loading work.id_ex_flipflop
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.adju_sv_unit
+# Loading work.adj_u
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ex_mem_ff_sv_unit
+# Loading work.ex_mem_flipflop
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.adder_sv_unit
+# Loading work.adder
+# Loading work.nzpcomp_sv_unit
+# Loading work.nzpcomp
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.mem_wb_ff_sv_unit
+# Loading work.mem_wb_flipflop
+# Loading work.rom_control_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory_dp
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'in'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(5).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc
+# ** Warning: (vsim-3015) /home/ddelane2/ece411/mp3/datapath.sv(323): [PCDPC] - Port size (16 or 16) does not match connection size (3) for port 'out'. The port definition is at: /home/ddelane2/ece411/mp3/register.sv(6).
+#         Region: /mp3_tb/dut/CPU_unit/datapathunit/cc

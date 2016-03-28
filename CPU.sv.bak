@@ -1,0 +1,124 @@
+import lc3b_types::*;
+
+module mp2
+(
+    input clk,
+
+    /* Memory signals */
+    input mem_resp,
+    input lc3b_word mem_rdata,
+    output mem_read,
+    output mem_write,
+    output lc3b_mem_wmask mem_byte_enable,
+    output lc3b_word mem_address,
+    output lc3b_word mem_wdata
+);
+//**********************************************
+/* Internal Signals */
+lc3b_opcode opcode;
+logic branch_enable;
+logic load_cc, load_ir, load_mar, load_mdr, load_pc, load_regfile;
+logic storemux_sel, destmux_sel, offsetmux_sel, leamux_sel, adj6mux_sel;
+logic A, D;
+logic [1:0] pcmux_sel, regfilemux_sel, marmux_sel, mdrmux_sel, alumux_sel; 
+lc3b_aluop aluop;
+lc3b_word instruction; //JSR
+lc3b_word alu_out;
+
+/* Top Level Blocks */
+
+cache cach_unit
+(
+	.clk,
+	
+	//Signals between CPU and Cache
+	.mem_read(mem_read),											//read signal
+	.mem_write(mem_write),											//write signal
+	.mem_byte_enable(mem_byte_enable), 				//mask saying which byte(s) to write to
+	.mem_address(mem_address),			//address from cpu
+   .mem_wdata(mem_wdata),  				//data to data bus from cache
+	output lc3b_word mem_rdata,				//data from cache to data bus
+
+	//Signals between Cache and Main Memory
+	input pmem_resp,										//signal indicating physical memory has finished operation
+	input lc3b_word pmem_rdata,				//data read from memory
+	output lc3b_word pmem_wdata,			//data to be written to memory
+	output pmem_read,										//read signal (to memory)
+	output pmem_write,						 			//write signal (to memory)
+	output lc3b_word pmem_address,		//address for memory
+
+)
+
+control controlunit
+(
+	.clk,
+	.opcode(opcode),
+	.branch_enable(branch_enable),
+	.instruction(instruction),
+	.alu_out(alu_out),
+	.A(A),
+	.D(D),
+	.load_pc(load_pc),
+	.load_ir(load_ir),
+	.load_regfile(load_regfile),
+	.load_mar(load_mar),
+	.load_mdr(load_mdr),
+	.load_cc(load_cc),
+	.pcmux_sel(pcmux_sel),
+	.storemux_sel(storemux_sel),
+	.alumux_sel(alumux_sel),
+	//.aluothermux_sel(aluothermux_sel), //addd
+	.regfilemux_sel(regfilemux_sel),
+	.marmux_sel(marmux_sel),
+	.mdrmux_sel(mdrmux_sel),
+	.leamux_sel(leamux_sel),
+	.destmux_sel(destmux_sel),
+	.offsetmux_sel(offsetmux_sel),
+	.adj6mux_sel(adj6mux_sel),
+	.aluop(aluop),
+
+/* memory signals */
+	.mem_resp(mem_resp),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.mem_byte_enable(mem_byte_enable)
+);
+
+
+datapath datapathunit
+(
+    .clk,
+
+    /* control signals */
+	.load_pc(load_pc),
+	.load_ir(load_ir),
+	.load_regfile(load_regfile),
+	.load_mar(load_mar),
+	.load_mdr(load_mdr),
+	.load_cc(load_cc),
+	.pcmux_sel(pcmux_sel),
+	.storemux_sel(storemux_sel),
+	.alumux_sel(alumux_sel),
+	//.aluothermux_sel(aluothermux_sel), //addd
+	.regfilemux_sel(regfilemux_sel),
+	.marmux_sel(marmux_sel),
+	.mdrmux_sel(mdrmux_sel),
+	.leamux_sel(leamux_sel),
+	.destmux_sel(destmux_sel),
+	.offsetmux_sel(offsetmux_sel),
+	.adj6mux_sel(adj6mux_sel),
+	.aluop(aluop),
+	.opcode(opcode),
+	.branch_enable(branch_enable),
+	.mem_rdata(mem_rdata),
+	.mem_address(mem_address),  // output port
+	.mem_wdata(mem_wdata), // output port, regfilemux, IR
+	.instruction(instruction),
+	.alu_out(alu_out),
+	.A(A),
+	.D(D)
+);
+
+
+
+endmodule : mp2

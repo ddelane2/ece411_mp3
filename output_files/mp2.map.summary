@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Mar  3 17:22:45 2016
+Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : mp2
+Top-level Entity Name : mp2
+Family : Stratix III
+Logic utilization : N/A
+    Combinational ALUTs : 1,854
+    Memory ALUTs : 0
+    Dedicated logic registers : 849
+Total registers : 849
+Total pins : 276
+Total virtual pins : 0
+Total block memory bits : 2,192
+DSP block 18-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

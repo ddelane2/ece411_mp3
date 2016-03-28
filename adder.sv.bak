@@ -1,0 +1,12 @@
+	module adder #(parameter width = 16)
+	(
+		input sel,
+		input [width-15:0] SR1, SR2,
+		output logic [width-15:0] f
+	);
+	
+	always_comb
+	begin
+			f = SR1 + SR2;
+	end
+	endmodule : adder

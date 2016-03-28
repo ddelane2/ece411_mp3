@@ -1,0 +1,15 @@
+	import lc3b_types::*;
+	
+	module decoder #(parameter width = 16)
+	(
+		input lc3b_word address, 
+		output logic [9:0] tag,
+		output logic [2:0] index,
+		output logic [2:0] offset,
+	);
+	
+		assign	tag = address[15:6];
+		assign index = address[5:3];
+		assign offset = address[2:0];
+
+	endmodule : decoder

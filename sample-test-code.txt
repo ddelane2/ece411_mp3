@@ -1,0 +1,26 @@
+   ORIGIN 0
+	;TEST CODE
+	
+	;Initialize
+	AND R0, R0, 0	;clear r0 and r1
+    AND R1, R1, 0	
+	 ADD R1, R1, 8  ;test immediates
+    ADD R3, R1, 5	
+    AND R4, R3, R1	
+    AND R5, R4, 0
+	 
+	LSHF R1, R3, 2	;test shifts
+	RSHFL R2, R1, 5
+	RSHFA R2, R2, 1
+	
+	 JSR here	;test jsr
+	 
+	 HALT:                   
+    BRnzp HALT         ;stop after jsr
+	 
+	 here: 
+	 RSHFL R2, R1, 5
+	 RET;
+	 
+    
+

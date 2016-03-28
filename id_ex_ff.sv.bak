@@ -1,0 +1,31 @@
+import lc3b_types::*;
+
+module id_ex_flipflop
+(
+    input clk,
+    input lc3b_word pc_plus2_in,
+	 input lc3b_word sr1_in,
+	 input lc3b_word sr2_in,
+	 input lc3b_reg dest_in,
+	 input lc3b_word adj9_in, 
+	 input lc3b_word control_id_ex_in,
+	 output lc3b_word sr1_out,
+	 output lc3b_word sr2_out,
+	 output lc3b_reg dest_out,
+	 output lc3b_word adj9_out,
+	 output lc3b_word control_id_ex_out
+);
+
+
+always_ff @(posedge clk)
+	begin
+	  pc_plus2_out = pc_plus2_in;
+	  sr1_out = sr1_in;
+	  sr2_out = sr2_in;
+	  dest_out = dest_in;
+	  adj9_out = adj9_in;
+	  
+
+	end
+	 
+ endmodule : id_ex_flipflop

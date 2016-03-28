@@ -1,0 +1,24 @@
+import lc3b_types::*;
+
+module mem_wb_flipflop
+(
+    input clk,
+    input lc3b_word mem_address_in,
+	 input lc3b_word mem_wdata_in,
+	 input lc3b_word control_mem_wb_in,
+	 output lc3b_word mem_address_out,
+	 output lc3b_word mem_wdata_out,
+	 output lc3b_word control_mem_wb_out,
+
+);
+
+
+always_ff @(posedge clk)
+	begin
+		mem_address_out = mem_address_in;
+		mem_wdata_out = mem_wdata_in;
+		control_mem_wb_out = control_mem_wb_in;
+	  
+	end
+	 
+ endmodule : mem_wb_flipflop

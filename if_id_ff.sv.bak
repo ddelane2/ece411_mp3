@@ -1,0 +1,23 @@
+import lc3b_types::*;
+
+module if_id_flipflop
+(
+    input clk,
+    input lc3b_word pc_plus2_in,
+	 input lc3b_word instruction_in,
+	 input lc3b_word control_if_id_in,	//comes from control
+	 output lc3b_word pc_plus2_out
+	 output lc3b_word instruction_out,
+	 input lc3b_word control_if_id_out
+);
+
+
+always_ff @(posedge clk)
+	begin
+	  pc_plus2_out = pc_plus2_in;
+	  instruction_out = instruction_in;
+	  control_if_id_out = control_if_id_in;
+
+	 end
+ 
+ endmodule : if_id_flipflop

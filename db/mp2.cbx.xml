@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mp2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp2|cache:cache_unit|cache_datapath:cache_unit|data_array:data_array0|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_qmo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp2|cache:cache_unit|cache_datapath:cache_unit|data_array:data_array1|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_qmo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp2|cache:cache_unit|cache_datapath:cache_unit|tag_array:tag_array0|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_tdo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp2|cache:cache_unit|cache_datapath:cache_unit|tag_array:tag_array1|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_tdo1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

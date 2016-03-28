@@ -1,0 +1,14 @@
+	module nzpcomp#(parameter width = 1)
+	(
+		input n, z, p
+		output logic  f
+	);
+	
+	always_comb
+	begin
+		if (n == 1 || z == 1 || p == 1)
+			f = 1;
+		else
+			f = 0;
+	end
+	endmodule : nzpcomp
